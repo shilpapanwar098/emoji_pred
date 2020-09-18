@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emojifier By SP & RR</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+      <!--Import materialize.css-->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand text-dark" href="#">
+        <img src="{% static 'img/logo.jpg' %}">
+        EMOJIFIER
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                    <a class="nav-link"> HOME</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="p-md-5 p-sm-3 bg-custom">
+    <div class="container">
+        <div class="row">
+            <form class="col-md-12 p-md-3 m-sm-1 shadow-custom" action="" method="POST">
+                <div class="form-row text-center m-auto d-block">
+                    <div class="input-field style my-md-4 my-sm-3">
+                        {% csrf_token %}
+                        <h2 id="text" class="mb-3">Enter Your Statement Here</h2>
+                        <textarea  id="textarea1" class="w-50" name="content"cols="30" rows="10"></textarea>
+                    </div>
+                    <button class="btn custom-btn w-50" type="submit" name="action">PREDICT <i class="fas fa-atom"></i> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="p-md-3 m-sm-1">
+        <div class="container">
+            <div class="row">
+                <div class="result-style">
+                    <!-- <script>
+                        $('#textarea1').val('New Text');
+                        $('#textarea1').trigger('autoresize');
+                    </script> -->
+                    <p><h5>Your Predicted Emoji for {{ content }} is {{ emoji }}</h5></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<!-- Footer -->
+<footer class="page-footer font-small text-center bg-footer">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Grid row-->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-12 py-3 m-auto">
+                <div class="flex-center footer-icon">
+
+                    <!-- Facebook -->
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic">
+                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!-- Google +-->
+                    <a class="gplus-ic">
+                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Linkedin -->
+                    <a class="li-ic" href="https://www.linkedin.com/in/rajesh-ranjan-79a49216b/">
+                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x" > </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <!--Pinterest-->
+                    <a class="pin-ic">
+                        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                    </a>
+                </div>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright bg-footer py-3 text-dark">
+        <h6 class="m-auto">Made with <i class="fas fa-heart"></i> By : Shilpa & Rajesh</h6>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+</body>
+</html>

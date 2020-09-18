@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: aliceblue;
+}
+
+.navbar img {
+    border-radius: 5px;
+    max-width: 50px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 35px;
+    font-weight: 600;
+    color: #3f3d56;
+    line-height: inherit;
+    height: auto;
+}
+
+.nav-link:hover {
+    text-decoration: none !important;
+    background-color: transparent;
+    color: #000 !important;
+}
+
+.bg-custom {
+    background: #fafafa;
+}
+
+.bg-aliceblue {
+    background: aliceblue !important;
+}
+
+.bg-footer {
+    background: #eafff4 !important;
+}
+
+.shadow-custom {
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -15px #999 !important;
+}
+
+.style textarea, .style textarea:hover, .style textarea:focus {
+    padding: 20px;
+    outline: inherit;
+    border-radius: 10px !important;
+     -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;;
+    background-color: #fff;
+
+    height:auto;
+}
+
+.custom-btn {
+    background: aliceblue;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    border: 2px solid #bdc5cc;
+    box-shadow: none !important;
+    text-align: center;
+    line-height: 4px;
+}
+
+.custom-btn:hover, .custom-btn:focus{
+    border: 2px solid #000;
+    background: aliceblue !important;
+}
+
+.result-style {
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -15px #999 !important;
+}
+
+footer {
+    border-top: 2px solid #ddd;
+}
+
+
+.footer-icon a>i {
+    color: #000 !important;
+    cursor: pointer;
+}
+
